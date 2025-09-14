@@ -86,7 +86,10 @@ After training, the model was tested on the unseen **test set**.
 - Accuracy improved steadily across epochs, with **training and test accuracy values very close**, showing minimal overfitting.  
 - Loss values also decreased consistently, often lower on the test set than on the training set.  
 
-Below are the plots of **accuracy variation** and **loss variation** during training and testing:  
+Below are the plots of **accuracy variation** and **loss variation** during training and testing:
 
-![Accuracy Plot](projects_images/accuracy.png)  
-![Loss Plot](projects_images/loss.png)
+<p float="left">
+  <img src="projects_images/accuracy.png" alt="Accuracy Plot" width="300" />
+  <img src="projects_images/loss.png" alt="Loss Plot" width="300" />
+</p>
+
