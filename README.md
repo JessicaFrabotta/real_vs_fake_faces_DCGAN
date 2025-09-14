@@ -89,7 +89,7 @@ After training, the model was tested on the unseen **test set**.
 Below are the plots of **accuracy variation** and **loss variation** during training and testing:
 
 <p float="left">
-  <img src="projects_images/accuracy.png" alt="Accuracy Plot" width="300" />
-  <img src="projects_images/loss.png" alt="Loss Plot" width="300" />
+  <img src="projects_images/accuracy.png" alt="Accuracy Plot" width="400" />
+  <img src="projects_images/loss.png" alt="Loss Plot" width="400" />
 </p>
 
