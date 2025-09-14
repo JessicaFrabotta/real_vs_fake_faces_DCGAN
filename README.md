@@ -68,3 +68,25 @@ All images were initially resized to **256x256 pixels**.
 ⚠️ The dataset requires at least **4 GB of storage space**, so you need to download the full dataset from Kaggle to run the code.
 
 ![Real vs Fake Faces](projects_images/real_vs_fake_faces.png)
+
+## 🏋️ Training and Testing of the Binary Classification Model
+
+After scaling and shuffling the data, we built the **binary classification model** (distinguishing fake vs real faces) and trained it on the training set.  
+
+The model was implemented using **Keras** as a sequential network with:  
+- **3 convolutional layers** generating 64, 128, and 64 feature maps, with kernel sizes 3x3, 5x5, and 3x3  
+- **Batch normalization, max pooling, and dropout layers** after each convolutional layer to reduce overfitting and improve generalization  
+- **Flatten layer** followed by two dense layers (with batch normalization + dropout)  
+- **Final dense layer** with 2 nodes activated by **Softmax**, returning probabilities for *fake* and *real* classes  
+
+📊 **Model size**: 1,666,882 parameters (1,666,114 trainable).  
+⏳ Training: 15 epochs, requiring several hours.  
+
+After training, the model was tested on the unseen **test set**.  
+- Accuracy improved steadily across epochs, with **training and test accuracy values very close**, showing minimal overfitting.  
+- Loss values also decreased consistently, often lower on the test set than on the training set.  
+
+Below are the plots of **accuracy variation** and **loss variation** during training and testing:  
+
+![Accuracy Plot](projects_images/accuracy.png)  
+![Loss Plot](projects_images/loss.png)
