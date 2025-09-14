@@ -90,3 +90,21 @@ Below are the plots of **accuracy variation** and **loss variation** during trai
 
 ![Accuracy Plot](projects_images/accuracy.png)  
 ![Loss Plot](projects_images/loss.png)
+
+## 🏗️ Deep Convolutional Generative Adversarial Network (DCGAN) – Detailed Architecture
+
+The goal was to create a **DCGAN** using a **discriminator** identical to our CNN binary classification model, except the last dense layer has only 1 node (to output the probability of the "real" class). The **generator** operates inversely:  
+
+- Starts with a **dense layer**, followed by **4 Convolutional2DTranspose layers** (kernel 4x4, stride 2).  
+- **Transposed convolution** (aka deconvolution) upsamples the feature map to match the spatial size of the input.  
+- **LeakyReLU** is used after each transposed convolution to prevent the dying ReLU problem.  
+
+The generator’s purpose is to **reconstruct fake images** as realistic as possible, of the same size as the original images fed to the discriminator (we used validation set images not used in previous steps). 
+
+## 🎥 Real-Time Classification of Face Images
+
+We tested our **binary classification model** on face images captured in real time using our laptop's front camera.  
+
+Since the model was trained on close-up, centrally positioned faces, we used a **pre-trained OpenCV cascade classifier**:  
+```python
+cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
