@@ -108,3 +108,8 @@ We tested our **binary classification model** on face images captured in real ti
 Since the model was trained on close-up, centrally positioned faces, we used a **pre-trained OpenCV cascade classifier**:  
 ```python
 cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+```
+
+## Authors
+- [@Pnlalessio](https://github.com/Pnlalessio)  
+- [@JessicaFrabotta](https://github.com/JessicaFrabotta)
