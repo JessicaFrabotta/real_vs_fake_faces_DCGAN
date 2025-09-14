@@ -47,3 +47,5 @@ In the case of DCGANs, instead of simple two-layer feed-forward networks, both g
 - **Discriminator**: a binary classification network that takes both real and fake images and outputs a probability of whether the given image is real or fake.
 
 ![Deep Convolutional Generative Adversarial Network](projects_images/DCGAN.png)
+
+Creating a real time system is a way to further asses the classification model robustness: the real and fake images are not always presented in a constrained environment but should be extracted from frames. The first operation that the system does is the extraction of the face image from the video frames, then the portion of frame in which the face was located is cropped and resized to have the same dimension of the images used to train the model. Finally, the image is ready to be classified by the model.
