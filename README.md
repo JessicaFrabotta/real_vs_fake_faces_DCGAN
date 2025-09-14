@@ -66,3 +66,5 @@ The data are split into three groups:
 
 All images were initially resized to **256x256 pixels**.  
 ⚠️ The dataset requires at least **4 GB of storage space**, so you need to download the full dataset from Kaggle to run the code.
+
+![Real vs Fake Faces](projects_images/real_vs_fake_faces.png)
